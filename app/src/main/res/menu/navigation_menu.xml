@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	
+	<group android:id="@+id/grupo1">
+		<item
+            android:id="@+id/payload_generator"
+            android:icon="@drawable/ic_developer_mode_white_24dp"
+            android:title="@string/pay_gen"/>
+		
+    	<item
+       		android:id="@+id/miPhoneConfg"
+			android:icon="@drawable/ic_wifi_tethering_white_24dp"
+        	android:title="@string/network_mobile"/>
+	
+    	<item android:id="@+id/miSettings"
+        	android:icon="@drawable/ic_settings"
+        	android:title="@string/settings"/>
+	
+	</group>
+	<group android:id="@+id/grupo2">
+		<item 
+			android:id="@+id/miSettingsSSH"
+			android:icon="@drawable/ic_connected"
+			android:title="@string/settings_ssh"/>
+
+		<item android:id="@+id/authentication"
+			android:icon="@drawable/ic_person_white_24dp"
+			android:title="@string/user_authentication"/>
+		
+	</group>
+
+	
+	<group android:id="@+id/grupo3">
+
+		<item android:id="@+id/miOS"
+			android:icon="@drawable/osicon"
+			android:title="@string/opensource"/>
+
+		<item android:id="@+id/miAvaliarPlaystore"
+			android:icon="@drawable/ic_rate_review_white_24dp"
+			android:title="@string/feedback"/>
+
+		<item android:id="@+id/donate"
+			android:icon="@drawable/donate"
+			android:title="@string/donate"/>
+		
+		<item android:id="@+id/miAbout"
+			android:icon="@drawable/ic_event_note_white_24dp"
+			android:title="@string/about"/>
+		
+	</group>
+	
+	<group android:id="@+id/grupo4">
+
+		<!--<item android:id="@+id/sshgratis"
+			android:icon="@drawable/ic_web"
+			android:title="Free Servers"/>-->
+
+	</group>
+	
+	
+	
+</menu>

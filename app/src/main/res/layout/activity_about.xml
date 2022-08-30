@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true">
+
+	<include
+		layout="@layout/toolbar_main"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:padding="10dip"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<android.support.v7.widget.CardView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dip"
+					android:paddingBottom="10dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:paddingRight="5dp"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dip"
+						android:layout_marginBottom="10dip"
+						android:minHeight="50dp"
+						android:paddingLeft="5dp">
+
+						<View
+							android:layout_width="15dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageView
+							android:layout_width="50dp"
+							android:layout_height="50dp"
+							android:padding="2dp"
+							android:src="@drawable/logoblack"/>
+
+						<View
+							android:layout_width="15dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Title"
+								android:textStyle="bold"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/app_name"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_info"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Version"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:textColor="#ff999999"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:id="@+id/appVersion"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/changelog"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_autorenew_black_24dp"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<TextView
+							android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/about"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/license"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_book"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<TextView
+							android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Licensa"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="10dp"/>
+
+			<android.support.v7.widget.CardView
+				android:visibility="visible"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="DEVELOPER"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"/>
+
+					<LinearLayout
+						android:id="@+id/developer"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Vanguard Apps"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="10dp"/>
+
+			<android.support.v7.widget.CardView
+				android:visibility="visible"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:text="CONTACT US"
+						android:textStyle="bold"
+						android:layout_marginLeft="15dp"/>
+
+					<LinearLayout
+						android:id="@+id/developer"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Email"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:autoLink="email"
+								android:text="thevanguardapps@protonmail.com"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Ronshiel Gitalan"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:autoLink="web"
+								android:text="https://www.facebook.com/iamronshiel"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="IvanLloyd Carreon DelaCruz"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:autoLink="web"
+								android:text="https://www.facebook.com/SZK.BlooDHackS11"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:tint="#ff999999"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Benito Ludo Requintosa"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:autoLink="web"
+								android:text="https://www.facebook.com/cmundefeatedhero"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</android.support.v7.widget.CardView>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="15dp"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>
+

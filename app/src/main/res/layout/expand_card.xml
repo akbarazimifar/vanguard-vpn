@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:id="@+id/title_background">
+
+	<LinearLayout
+		android:id="@+id/title_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:gravity="center_vertical"
+		android:padding="5dp">
+
+		<ImageView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:src="@drawable/ic_connection_type"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:layout_weight="1.0"
+			android:layout_marginLeft="5dp">
+
+			<TextView
+				android:id="@+id/text_view_card_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:id="@+id/p"
+				android:gravity="center_vertical"/>
+
+		</LinearLayout>
+
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true">
+
+			<ImageButton
+				android:id="@+id/image_button_collapse"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@null"
+				android:src="@drawable/baseline_keyboard_arrow_right_black_24"/>
+
+			<ImageButton
+				android:id="@+id/image_button_expand"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@null"
+				android:src="@drawable/baseline_keyboard_arrow_down_black_24"
+				android:visibility="gone"/>
+
+		</FrameLayout>
+
+	</LinearLayout>
+
+	<ViewStub
+		android:id="@+id/view_stub"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/title_container"
+		android:visibility="gone"
+		android:inflatedId="@+id/inner_view"/>
+
+</LinearLayout>
+
