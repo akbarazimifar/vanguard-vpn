@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Idioma -->
+	<array name="pref_idioma_option_labels">
+        <item>English</item>
+    </array>
+
+    <array name="pref_idioma_option_values">
+        <item>default</item>
+        <item>es</item>
+		<item>pt-BR</item>
+    </array>
+	<array name="pref_maxThreads_option_labels">
+        <item>2 (minimum)</item>
+		<item>8 (standard)</item>
+		<item>15 (medium)</item>
+	    <item>25 (maximum)</item>
+    </array>
+
+    <array name="pref_maxThreads_option_values">
+        <item>2th</item>
+		<item>8th</item>
+		<item>15th</item>
+        <item>25th</item>
+    </array>
+	
+	<array name="pref_modoNoturno_option_labels">
+        <item>Disable</item>
+	    <item>Enable</item>
+    </array>
+
+    <array name="pref_modoNoturno_option_values">
+        <item>off</item>
+        <item>on</item>
+    </array>
+	
+</resources>

@@ -1,0 +1,58 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	<PreferenceCategory
+		android:title="@string/category_advanced_settings">
+
+		<CheckBoxPreference
+			android:key="modeDebug"
+			android:title="@string/title_mode_debug"
+			android:summary="@string/summary_mode_debug"
+		/>
+
+		<ListPreference
+        	android:key="numberMaxThreadSocks"
+            android:title="@string/title_number_max_threads"
+			android:summary="@string/summary_number_max_threads"
+			android:defaultValue="8th"
+        	android:entries="@array/pref_maxThreads_option_labels"
+        	android:entryValues="@array/pref_maxThreads_option_values"
+		/>
+
+		<CheckBoxPreference
+			android:key="tetherSubnet"
+			android:title="@string/title_tethering_subnet"
+			android:summary="@string/summary_tethering_subnet"/>
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory
+		android:title="@string/title_filter_apps">
+
+		<CheckBoxPreference
+			android:key="filterApps"
+			android:title="@string/title_filter_apps"
+		/>
+
+		<CheckBoxPreference
+			android:key="filterBypassMode"
+			android:summary="@string/summary_bypass_modo"
+			android:title="@string/title_bypass_mode"
+		/>
+
+		<EditTextPreference
+            android:key="filterAppsList"
+            android:title="@string/title_filter_apps"
+            android:summary="@string/summary_apps_list"
+            android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix"
+		/>
+
+	</PreferenceCategory>
+
+
+</PreferenceScreen>
