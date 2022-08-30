@@ -1,6 +1,6 @@
 # Vanguard VPN
 
-The official GitHub repository for the Vanguard VPN open source project.
+The official github repository for the Vanguard VPN open source project.
 
 Vanguard VPN is a professional VPN tool to browse the Internet privately and securely with multiple tunneling protocols and technologies integrated into one application.
 
