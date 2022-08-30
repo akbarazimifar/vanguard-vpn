@@ -17,7 +17,7 @@ Features:
 - Data compression
 - Ability to change buffer size, etc
 
-[Click here](https://github.com/thevanguardapps/monochrome/raw/main/app/release/app-release.apk) to download Monochrome APK.
+[Click here](https://github.com/thevanguardapps/vanguard-vpn/raw/main/app/release/app-release.apk) to download Vanguard VPN APK.
 
 # Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request.
