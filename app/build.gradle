@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+apply plugin: "com.bugsnag.android.gradle"
+
+android {
+    compileSdkVersion 30
+	buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.vanguard.vpn"
+		minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 3
+        versionName "1.0.2"
+		multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies { 
+	compile 'com.android.support:cardview-v7:+'
+    compile 'com.android.support:appcompat-v7:25.+'
+	compile 'com.android.support:preference-v7:25.+'
+	compile 'com.android.support:design:25.+'
+	compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.bugsnag:bugsnag-android:5.4.0"
+    implementation 'com.mixpanel.android:mixpanel-android:6.0.0'
+	api 'org.connectbot.jbcrypt:jbcrypt:1.0.0'
+	api 'com.android.support:design:25.1.1'
+}
+repositories {
+    mavenCentral()
+}

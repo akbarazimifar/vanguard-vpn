@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vanguard.vpn">
+
+    <!--Full network access-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+		android:requestLegacyExternalStorage="true"
+		android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true">
+
+        <activity android:name="com.vanguard.vpn.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.vanguard.vpn.MainActivity"/>
+
+        <activity
+            android:name="com.vanguard.vpn.activities.ConfigGeralActivity"
+            android:parentActivityName="com.vanguard.vpn.MainActivity"
+            android:label="@string/settings"/>
+
+        <activity android:name="com.vanguard.vpn.LaunchVpn"
+            android:label="@string/app_name"/>
+
+
+        <!--- Receivers -->
+        <receiver
+            android:name="com.vanguard.vpn.core.MainReceiver">
+            <intent-filter>
+                <action
+                    android:name="com.vanguard.vpn.core.MainReceiver.ACTION_SERVICE_STOP">
+                </action>
+                <action
+                    android:name="com.vanguard.vpn.core.MainReceiver.ACTION_SERVICE_RESTART">
+                </action>
+            </intent-filter>
+        </receiver>
+
+
+        <!--- Services -->
+        <service
+            android:name="com.vanguard.vpn.tunnel.vpn.TunnelVpnService"
+            android:exported="false"
+            android:enabled="true"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vanguard.vpn.service.SocksDNSService"
+            android:exported="false">
+		</service>
+
+        <activity
+            android:name="com.vanguard.vpn.activities.ExceptionActivity"
+            android:label="Application Error"/>
+
+        <activity
+            android:name="com.vanguard.vpn.TunnelActivity"
+            android:parentActivityName="com.vanguard.vpn.MainActivity"
+            android:label="Main"/>
+
+        <activity
+            android:name="com.vanguard.vpn.activities.DonateActivity"
+            android:parentActivityName="com.vanguard.vpn.MainActivity"
+            android:label="@string/donate"/>
+		
+        <activity
+            android:name="com.vanguard.vpn.activities.AboutActivity"
+            android:parentActivityName="com.vanguard.vpn.MainActivity"
+            android:label="@string/about"/>
+
+        <meta-data
+            android:name="com.bugsnag.android.API_KEY"
+            android:value="456a785554b3a32233419b7818d11883"/>
+
+    </application>
+
+</manifest>
