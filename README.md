@@ -4,7 +4,7 @@ The official github repository for the Vanguard VPN open source project.
 
 Vanguard VPN is a professional VPN tool to browse the Internet privately and securely with multiple tunneling protocols and technologies integrated into one application.
 
-Features:
+# Features:
 - Secure your connection using SSH
 - SSL/TLS tunneling is supported
 - DNS tunneling
@@ -15,9 +15,15 @@ Features:
 - Application Filter
 - DNS Proxy / Google DNS
 - Data compression
-- Ability to change buffer size, etc
+- Ability to change buffer size, etc.
+
+# Download
 
 [Click here](https://github.com/thevanguardapps/vanguard-vpn/raw/main/app/release/app-release.apk) to download Vanguard VPN APK.
+
+OR  
+
+[Click here](https://galaxy.store/vanguard1) to download Vanguard VPN through Samsung Galaxy Store.
 
 # Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request.
